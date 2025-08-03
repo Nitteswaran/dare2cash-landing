@@ -539,12 +539,45 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Turn Dares Into Dollars</h1>
-                <p>Accept bold dares, prove it with evidence, and earn real cash. Or post your own challenges and watch the world try to complete them</p>
+    <!-- Hero Section with Animation -->
+<section class="hero" style="padding: 80px 20px; text-align: center;">
+  <div class="container">
+    <h1 class="blur-in delay-1">Turn Dares Into Dollars</h1>
+    <p class="blur-in delay-2">Accept bold dares, prove it with evidence, and earn real cash. Or post your own challenges and watch the world try to complete them.</p>
+  </div>
+</section>
+
+<style>
+  .blur-in {
+    opacity: 0;
+    transform: translateY(-20px);
+    filter: blur(10px);
+    transition: all 1s ease;
+  }
+
+  .blur-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  .delay-1 {
+    transition-delay: 0.2s;
+  }
+
+  .delay-2 {
+    transition-delay: 0.6s;
+  }
+</style>
+
+<script>
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.blur-in').forEach(el => {
+      el.classList.add('visible');
+    });
+  });
+</script>
+
                 <form action="https://formspree.io/f/xwpqnyjd" method="POST" style="max-width: 500px; margin: 0 auto;">
   <label style="display: block; margin-bottom: 10px; font-weight: bold;">
     Your Email:
